@@ -43,8 +43,9 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy reactnativeapp\
-            --image prudhvigopasina1999/reactnative_deploy:$GITHUB_SHA \
-            --platform managed \
-            --region ${{ secrets.GCP_REGION }} \
-            --allow-unauthenticated
+          gcloud run deploy reactnativeapp \
+            --image=prudhvigopasina1999/reactnative_deploy:$GITHUB_SHA \
+            --platform=managed \
+            --region=${{ secrets.GCP_REGION }} \
+            --allow-unauthenticated \
+            --port=8081
