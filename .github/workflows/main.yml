@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy React-Native_AzureAD \
+          gcloud run deploy react-native_azuread \
             --image prudhvigopasina1999/reactnative_deploy:$GITHUB_SHA \
             --platform managed \
             --region ${{ secrets.GCP_REGION }} \
